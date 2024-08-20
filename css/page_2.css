@@ -1,0 +1,67 @@
+.option {
+  justify-content: space-between;
+}
+.option div h1 {
+  font-size: 1.5rem;
+}
+.option #new_row,
+.option #refresh,
+.option #sort {
+  width: 70px;
+  height: 50px;
+}
+.option #new_row:hover,
+.option #refresh:hover,
+.option #sort:hover {
+  background-color: aquamarine;
+  color: #5f76e8;
+}
+
+.option div #search {
+  width: 250px;
+  height: 30px;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+table {
+  margin-top: 0.7%;
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;  
+  text-align: center;
+}
+table tbody tr,
+td {
+  border: 1px solid black;
+}
+table thead {
+  color: white;
+  background-color: #3f5467;
+}
+table tbody .edit {
+  background-color: #64a2e4;
+  width: 35px;
+  height: 35px;
+  margin: 3px 0px;
+  padding: 5px;
+}
+table tbody .delete {
+  background-color: #dc3546;
+  width: 35px;
+  height: 35px;
+  margin: 3px 0px;
+}
+table tbody .save {
+  background-color: rgb(24, 165, 46);
+  width: 35px;
+  height: 35px;
+  margin: 3px 0px;
+  display: none;
+}
+table tbody .cancel {
+  background-color: rgb(175, 17, 54);
+  width: 35px;
+  height: 35px;
+  margin: 3px 0px;
+  display: none;
+}

@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.flex{
+    display: flex;
+}
+body{
+    position: relative;
+    width: 100%;
+    min-height: 150vh;
+}
+/* NAV */
+nav{
+    position: fixed;
+    width: 15%;
+    height: 100%;
+    background-color: #5f76e8;
+    align-items: center;
+    z-index: 200;
+    transition: ease-in-out .5s;
+}
+
+nav ul{
+    width: 100%;
+    list-style-type: none;
+    overflow: hidden;
+}
+nav ul li a{
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    display: inline-flex;
+    align-items: center;
+    padding: 15px;
+}
+nav ul li a fa-solid{
+    margin: 0 20px;
+    color: black;
+    font-size: 1em;
+}
+nav ul li a:hover{
+    color: whitesmoke;
+    background-color: cyan  ;
+}
+nav .hiden_menu{
+    position: absolute;
+    top:10.4%;
+    right: -46px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    border-radius: 0 10% 10% 0;
+    cursor: pointer;
+}
+nav .hiden_menu:hover{
+    background-color: cyan;
+    color: white;
+}
+nav.hide{
+    width: 0;
+}
+nav .users{
+    margin-bottom: 25%;
+}
+nav .users img{
+    width: 45% ;
+    height:45%;
+    border-radius: 50%;
+    margin: 2%;
+}
+nav .users ul{
+    margin-top: 20%;
+    margin-left: 10%;
+}
+
+/* SECTION */
+/* HEADER */
+header{
+    background-color: #5f76e8;
+    width: 100%;
+}
+header{
+    justify-content: space-between;
+    align-items: center;
+}
+header .user img{
+    width: 50px;
+    margin-top: 30%;
+    border-radius: 50%;
+}
+header .user{
+    right: 40%;
+    padding-right: 1.5%;
+}
+header .user p{
+    color: white;
+    padding-left: 10px;
+}
+/*CONTENT*/
+.content{
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 85%;
+    min-height: 100vh;
+    padding: 20px;
+    transition: ease-in-out .5s;
+}
+.content.expand{
+    width: 100%;
+    left:0;
+    padding: 0;
+}
+/* FOOTER */
+.footer, .contact{
+    justify-content: space-between;
+}
+footer .school-info, .contact, h3{
+    list-style-type: none;
+    padding: 20px;
+}
+footer{
+    margin-top: 1%;
+    background-color: #5f76e8;
+}
+.yellow{
+    color: yellow;
+}
+.footer_light{
+    background-color: white;
+}
+.footer_light h4{
+    width: 80%;
+    text-align: center;
+    color:blue;
+    text-align: left;
+    font-weight: normal;
+    padding: 10px;
+}
