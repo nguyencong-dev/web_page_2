@@ -28,6 +28,9 @@ nav ul{
     list-style-type: none;
     overflow: hidden;
 }
+fa-solid{
+    color: white;
+}
 nav ul li a{
     width: 100%;
     text-decoration: none;
@@ -39,12 +42,11 @@ nav ul li a{
 }
 nav ul li a fa-solid{
     margin: 0 20px;
-    color: black;
     font-size: 1em;
 }
 nav ul li a:hover{
-    color: whitesmoke;
-    background-color: cyan  ;
+    color: #5f76e8;
+    background-color: white  ;
 }
 nav .hiden_menu{
     position: absolute;
