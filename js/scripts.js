@@ -40,23 +40,25 @@ window.onload = function () {
 
   // EDIT
   let editButtons = document.getElementsByClassName("edit");
+
   for (let ed of editButtons) {
     ed.onclick = function () {
-      let row = ed.closest("tr");
-      let cells = row.querySelectorAll("td:not(:last-child)");
-      let index = 0;
-
-      for (let cell of cells) {
-        let currentText = cell.textContent;
-          cell.innerHTML = `<input type="text" value="${currentText}">`;
-        index++;
-      }
-      row.querySelector(".edit").style.display = "none";
-      row.querySelector(".delete").style.display = "none";
-      row.querySelector(".save").style.display = "inline";
-      row.querySelector(".cancel").style.display = "inline";
+      let row = ed.closest('tr');
+      let cells = row.querySelectorAll('td:not(:last-child)');
+  
+      cells.forEach((cell, index) => {
+          let currentValue = cell.textContent;
+          cell.innerHTML = `<input style="width:100%" type="text" value="${currentValue}">`;
+      });
+  
+      // Hiển thị và ẩn các nút cần thiết
+      row.querySelector('.save').style.display = 'inline';
+      row.querySelector('.cancel').style.display = 'inline';
+      ed.style.display = 'none';
+      row.querySelector('.delete').style.display = 'none';
     };
   }
+  
 
   // SAVE
   let saveButtons = document.getElementsByClassName("save");

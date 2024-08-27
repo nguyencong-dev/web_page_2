@@ -17,7 +17,7 @@ nav{
     position: fixed;
     width: 15%;
     height: 100%;
-    background-color: #5f76e8;
+    background-color: #1d559f;
     align-items: center;
     z-index: 200;
     transition: ease-in-out .5s;
@@ -45,8 +45,8 @@ nav ul li a fa-solid{
     font-size: 1em;
 }
 nav ul li a:hover{
-    color: #5f76e8;
-    background-color: white  ;
+    color: #1d559f;
+    background-color: white   ;
 }
 nav .hiden_menu{
     position: absolute;
@@ -72,8 +72,7 @@ nav .users{
     margin-bottom: 25%;
 }
 nav .users img{
-    width: 45% ;
-    height:45%;
+    width: 120px ;
     border-radius: 50%;
     margin: 2%;
 }
@@ -85,7 +84,7 @@ nav .users ul{
 /* SECTION */
 /* HEADER */
 header{
-    background-color: #5f76e8;
+    background-color: #1d559f;
     width: 100%;
 }
 header{
@@ -121,16 +120,18 @@ header .user p{
     padding: 0;
 }
 /* FOOTER */
-.footer, .contact{
+footer, .contact{
     justify-content: space-between;
 }
 footer .school-info, .contact, h3{
+    
     list-style-type: none;
     padding: 20px;
 }
 footer{
+    color: white;
     margin-top: 1%;
-    background-color: #5f76e8;
+    background-color: #1d559f;
 }
 .yellow{
     color: yellow;
@@ -145,4 +146,14 @@ footer{
     text-align: left;
     font-weight: normal;
     padding: 10px;
+}
+footer div li a{
+    color: white;
+    text-decoration: none;
+}
+footer div li a:hover{
+    color: lightgray;
+}
+footer div li a:active{
+    color: darkgray;
 }

@@ -60,6 +60,9 @@
        margin-left: 4%;
        font-size: 2rem;
     }
+    .table_data{
+        overflow-y: hidden;
+    }
 }
 
 /* Media Query cho màn hình nhỏ hơn 576px */
