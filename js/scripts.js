@@ -31,34 +31,34 @@ window.onload = function () {
   let del = document.getElementsByClassName("delete");
   for (let d of del) {
     d.onclick = function () {
-      let row = d.closest("tr");
-      if (row) {
-        row.parentNode.removeChild(row);
+      if (confirm("Bạn có chắc chắn muốn xóa điểm môn này không?")) {
+        let row = d.closest("tr");
+        if (row) {
+          row.parentNode.removeChild(row);
+        }
       }
     };
   }
-
   // EDIT
   let editButtons = document.getElementsByClassName("edit");
 
   for (let ed of editButtons) {
     ed.onclick = function () {
-      let row = ed.closest('tr');
-      let cells = row.querySelectorAll('td:not(:last-child)');
-  
+      let row = ed.closest("tr");
+      let cells = row.querySelectorAll("td:not(:last-child)");
+
       cells.forEach((cell, index) => {
-          let currentValue = cell.textContent;
-          cell.innerHTML = `<input style="width:100%" type="text" value="${currentValue}">`;
+        let currentValue = cell.textContent;
+        cell.innerHTML = `<input style="width:100%" type="text" value="${currentValue}">`;
       });
-  
+
       // Hiển thị và ẩn các nút cần thiết
-      row.querySelector('.save').style.display = 'inline';
-      row.querySelector('.cancel').style.display = 'inline';
-      ed.style.display = 'none';
-      row.querySelector('.delete').style.display = 'none';
+      row.querySelector(".save").style.display = "inline";
+      row.querySelector(".cancel").style.display = "inline";
+      ed.style.display = "none";
+      row.querySelector(".delete").style.display = "none";
     };
   }
-  
 
   // SAVE
   let saveButtons = document.getElementsByClassName("save");
@@ -182,9 +182,11 @@ window.onload = function () {
     let del = document.getElementsByClassName("delete");
     for (let d of del) {
       d.onclick = function () {
-        let row = d.closest("tr");
-        if (row) {
-          row.parentNode.removeChild(row);
+        if (confirm("Bạn có chắc chắn muốn xóa điểm môn này không?")) {
+          let row = d.closest("tr");
+          if (row) {
+            row.parentNode.removeChild(row);
+          }
         }
       };
     }
@@ -230,5 +232,25 @@ window.onload = function () {
         row.querySelector(".cancel").style.display = "none";
       };
     }
+  };
+  // refresh
+  let ref = document.getElementById("refresh");
+  ref.onclick = function () {
+    location.reload();
+  };
+  // sort
+  let sortButton = document.getElementById("sort");
+  sortButton.onclick = function () {
+    let table = document.querySelector(".table_data");
+    let tbody = table.querySelector("tbody");
+    let rows = Array.from(tbody.rows);
+    let columnIndex = 7;
+    let sortedRows = rows.sort((a, b) => {
+      let scoreA = parseFloat(a.cells[columnIndex].innerText);
+      let scoreB = parseFloat(b.cells[columnIndex].innerText);
+      return scoreA - scoreB;
+    });
+    tbody.innerHTML = "";
+    sortedRows.forEach((row) => tbody.appendChild(row));
   };
 };
